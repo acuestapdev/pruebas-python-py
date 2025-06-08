@@ -24,7 +24,11 @@ python3 main.py
 Para el manejo de varias versiones de python
 Tomado de: https://www.youtube.com/watch?v=9xn1F6JzHUk
 
-#Se debe instalar: brew install pyenv
+#Se debe instalar: 
+```sh
+brew install pyenv
+```
+#Instalar la versión de python deseada
 ```sh
 pyenv install “version python” 
 ```
@@ -50,7 +54,20 @@ echo ‘PATH=$(pyenv root)/shims:$PATH’ >> ~/.bash
 cd /“Carpeta proyecto”
 pyenv local “version python”
 ```
-##Para guardar info de paquetes instalados en ambiente virtual
+# Crear ambientes virtuales para cada modulo o proyecto e instalar dependencias necesarias
+
+#Crear ambiente virtual
 ```sh
-pip3 freeze >> requirements.txt
+python3 -m venv env
+```
+
+#Instalar dependencias y modulos necesarios para el proyecto
+```sh
+source env/bin/activate
+pip3 install -r requirements.txt
+```
+
+#Para guardar info de dependencias instalads en ambiente virtual
+```sh
+pip3 freeze > requirements.txt
 ```
