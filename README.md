@@ -71,3 +71,28 @@ pip3 install -r requirements.txt
 ```sh
 pip3 freeze > requirements.txt
 ```
+
+# FAST API
+#Tomado de: https://fastapi.tiangolo.com/#installation
+
+#Para levantar el servidor
+```sh
+uvicorn main:app --reload --port 8080
+```
+
+# DOCKER
+#Como instalar docker en Mac
+Instalador: https://docs.docker.com/desktop/setup/install/mac-install/
+Tomado de: https://platzi.com/cursos/python-pip/instalacion-de-docker/
+
+En Mac tienes dos opciones. Todo dependerá si tienes los nuevos chips M1 o Intel, ya que hay un instalable apropiado para ambas arquitecturas de chip. Puedes escoger el instalable desde Install Docker Desktop on Mac.
+
+Adicionalmente, si cuentas con los nuevos chips M1, debes ejecutar la siguiente instrucción en tu terminal softwareupdate --install-rosetta
+
+Una vez descargues el instalador adecuado, solo debes seguir los pasos y pasar Docker Desktop a tus aplicaciones.
+
+#Para instalar Docker desktop en MAC 10.15 - Versiones viejas.
+Tomado de: https://www.youtube.com/watch?v=9ALVtKjfmHA
+
+
+
