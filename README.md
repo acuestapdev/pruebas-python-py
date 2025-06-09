@@ -37,7 +37,9 @@ pyenv install “version python”
 pyenv global “version python” 
 ```
 #Esto considera a pyenv como el gestor de las versiones de python
+```sh
 PATH=$(pyenv root)/shims:$PATH
+```
 
 #Esto garantiza que cada que abra la terminal se garantice la versión global cuando la terminal esta configurada con zshrc
 
@@ -46,8 +48,9 @@ echo ‘PATH=$(pyenv root)/shims:$PATH’ >> ~/.zshrc
 ```
 
 #Esto garantiza que cada que abra la terminal se garantice la versión global cuando la terminal esta configurada con bash
-
+```sh
 echo ‘PATH=$(pyenv root)/shims:$PATH’ >> ~/.bash
+```
 
 #Para configurar una versión en una carpeta de proyecto puntual
 ```sh
@@ -93,6 +96,31 @@ Una vez descargues el instalador adecuado, solo debes seguir los pasos y pasar D
 
 #Para instalar Docker desktop en MAC 10.15 - Versiones viejas.
 Tomado de: https://www.youtube.com/watch?v=9ALVtKjfmHA
+
+#La que me funciono en MAC 10.15.:
+Tomado de: https://stackoverflow.com/questions/68373008/install-docker-on-macos-catalina
+
+It seems that Docker Desktop 4.16 does not support macOS Catalina (10.15) any more.
+
+If you don't want to update to a newer macOS version, you can install an older version of Docker Desktop which still works on macOS Catalina. Docker Desktop 4.15 works on Catalina.
+
+```sh
+# Download Cask code for Docker Desktop 4.15.0,93002
+curl https://raw.githubusercontent.com/Homebrew/homebrew-cask/1a83f3469ab57b01c0312aa70503058f7a27bd1d/Casks/docker.rb -O
+
+# Install Docker Desktop from Cask Code
+brew install --cask docker.rb
+
+# OR
+
+# if Docker Desktop is already installed then reinstall from Cask Code
+brew reinstall --cask docker.rb 
+```
+
+#Para jugar con Docker
+Tomado de: https://labs.play-with-docker.com/
+
+
 
 
 
