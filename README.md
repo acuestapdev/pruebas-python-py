@@ -85,7 +85,9 @@ uvicorn main:app --reload --port 8080
 
 # DOCKER
 #Como instalar docker en Mac
+
 Instalador: https://docs.docker.com/desktop/setup/install/mac-install/
+
 Tomado de: https://platzi.com/cursos/python-pip/instalacion-de-docker/
 
 En Mac tienes dos opciones. Todo dependerá si tienes los nuevos chips M1 o Intel, ya que hay un instalable apropiado para ambas arquitecturas de chip. Puedes escoger el instalable desde Install Docker Desktop on Mac.
@@ -95,9 +97,11 @@ Adicionalmente, si cuentas con los nuevos chips M1, debes ejecutar la siguiente 
 Una vez descargues el instalador adecuado, solo debes seguir los pasos y pasar Docker Desktop a tus aplicaciones.
 
 #Para instalar Docker desktop en MAC 10.15 - Versiones viejas.
+
 Tomado de: https://www.youtube.com/watch?v=9ALVtKjfmHA
 
 #La que me funciono en MAC 10.15.:
+
 Tomado de: https://stackoverflow.com/questions/68373008/install-docker-on-macos-catalina
 
 It seems that Docker Desktop 4.16 does not support macOS Catalina (10.15) any more.
@@ -117,7 +121,34 @@ brew install --cask docker.rb
 brew reinstall --cask docker.rb 
 ```
 
+#Para crear el contenedor
+```sh
+docker-compose build
+```
+
+#Para Subir o inicializar contenedor
+```sh
+docker-compose up -d
+```
+
+#Para validar el contenedor(es) creado(s)
+```sh
+docker-compose ps
+```
+
+#Para ingresar a un contenedor creado, con  una interfaz de ejecución bash
+```sh
+docker-compose exec "Nombre Contenedor" bash
+docker-compose exec app-csv bash
+```
+
+#Para bajar un contenedor creado
+```sh
+docker-compose down
+```
+
 #Para jugar con Docker
+
 Tomado de: https://labs.play-with-docker.com/
 
 
